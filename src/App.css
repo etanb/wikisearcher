@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+/* Unfortunate AntD Overrides */
+
+.ant-timeline-item-head {
+  background-color: transparent !important;
+  top: 50px !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ant-timeline-item-tail {
+  border-left: 0.5px dashed #CEF6FF !important;
+  top: 60px !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ant-timeline-item-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ant-btn:hover {
+  color: #8ECAE6 !important;
+  border-color: #8ECAE6 !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ant-layout.appContainer {
+  background-color: #8ECAE6;
+}
+
+/* End: Unfortunate AntD Overrides */
+
+/* Stylize item rank by odd / even */
+
+.ant-timeline-item-head-custom .itemRank {
+  border-radius: 50%;
+  color: #CEF6FF;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  overflow: hidden;
+  letter-spacing: -4px;
+}
+
+.itemRankEven {
+  border-right: 2px solid #CEF6FF;
+  margin-left: -4px;
+  padding-right: 4px;
+}
+
+.itemRankOdd {
+  border-left: 2px solid #CEF6FF;
+  margin-left: -8px;
+}
+
+/* End: Stylize item rank by odd / even */
+
+.logo {
+  display: flex;
+  align-items: baseline;
+}
+
+.cardContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topThreeViewDaysRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
